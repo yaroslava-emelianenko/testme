@@ -7,8 +7,17 @@ header('Content-Type: text/html; charset=utf-8');
  * CONTROLLER BLOCK + MODEL BLOCK
  * В этой части идёт создание и обработка PHP кода
  */
-$title = 'Домашняя работа';
+$title = 'Условные выражения';
+$description = 'Проверьте то, что переменная $test меньше 10.';
 
+$result = '';
+$test = 5;
+
+if ($test < 10) {
+    $result = 'меньше';
+} else {
+    $result = 'больше';
+}
 /*
  * VIEW BLOCK / Вид сайта
  * В этой части идёт вывод HTML и PHP
@@ -21,7 +30,8 @@ $title = 'Домашняя работа';
     <title><?= $title; ?>></title>
 </head>
 <body>
-<h1><?= $title; ?></h1>
-<a href="conditions/">Условные выражения</a><br>
+<h1><?= $description; ?></h1>
+<h3>Результат:</h3>
+<p><?= $test;?> <?= $result; ?> 10</p>
 </body>
 </html>
